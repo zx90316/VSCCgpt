@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>AI 客服机器人</title>
+    <title>AI VSCC</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         #chat { width: 500px; margin: 0 auto; }
@@ -14,14 +14,14 @@
 </head>
 <body>
     <div id="chat">
-        <h2>AI 客服机器人</h2>
+        <h2>AI VSCC</h2>
         {% if question %}
             <div class="message user"><strong>您：</strong> {{ question }}</div>
-            <div class="message bot"><strong>机器人：</strong> {{ answer }}</div>
+            <div class="message bot"><strong>VSCC：</strong> {{ answer }}</div>
         {% endif %}
         <form method="post">
-            <input type="text" name="question" placeholder="请输入您的问题..." autocomplete="off" />
-            <button type="submit">发送</button>
+            <input type="text" name="question" placeholder="請輸入問題..." autocomplete="off" />
+            <button type="submit">送出</button>
         </form>
     </div>
 </body>
