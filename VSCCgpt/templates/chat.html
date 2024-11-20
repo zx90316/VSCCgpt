@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>AI 客服机器人</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #chat { width: 500px; margin: 0 auto; }
+        .message { margin: 10px 0; }
+        .user { text-align: right; color: blue; }
+        .bot { text-align: left; color: green; }
+        input[type="text"] { width: 100%; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div id="chat">
+        <h2>AI 客服机器人</h2>
+        {% if question %}
+            <div class="message user"><strong>您：</strong> {{ question }}</div>
+            <div class="message bot"><strong>机器人：</strong> {{ answer }}</div>
+        {% endif %}
+        <form method="post">
+            <input type="text" name="question" placeholder="请输入您的问题..." autocomplete="off" />
+            <button type="submit">发送</button>
+        </form>
+    </div>
+</body>
+</html>
